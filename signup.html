@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Sign Up | CarWow{% endblock %}
+{% block body %}
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg">
+        <div class="card-header bg-dark text-white text-center py-3">
+          <h2><i class="fas fa-user-plus me-2"></i> Create Your Account</h2>
+        </div>
+        <div class="card-body p-4">
+          <form method="POST" action="/signup" class="needs-validation" novalidate>
+            {% csrf_token %}
+            
+            <!-- Email Field -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                <input 
+                  type="email" 
+                  class="form-control" 
+                  id="email" 
+                  name="email" 
+                  placeholder="example@email.com" 
+                  required
+                >
+                <div class="invalid-feedback">
+                  Please enter a valid email address
+                </div>
+              </div>
+            </div>
+            
+            <!-- Password Field -->
+            <div class="mb-4">
+              <label for="password" class="form-label">Password</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                <input 
+                  type="password" 
+                  class="form-control" 
+                  id="password" 
+                  name="password" 
+                  placeholder="At least 8 characters" 
+                  minlength="8"
+                  required
+                >
+                <div class="invalid-feedback">
+                  Password must be at least 8 characters
+                </div>
+              </div>
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="d-grid gap-2">
+              <button class="btn btn-warning btn-lg fw-bold" type="submit">
+                <i class="fas fa-user-check me-2"></i> Sign Up Now
+              </button>
+            </div>
+            
+           
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Form Validation Script -->
+<script>
+(function () {
+  'use strict'
+  const forms = document.querySelectorAll('.needs-validation')
+  Array.from(forms).forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+{% endblock %}

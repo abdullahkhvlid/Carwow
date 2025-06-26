@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block title %}Home | CarWow{% endblock %}
+{% block body %}
+<!-- Hero Section -->
+<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1494972308805-463bc619d34e'); background-size: cover; background-position: center;">
+  <div class="container text-center text-white py-5">
+    <h1 class="display-4 fw-bold mb-3">Find Your <span class="text-warning">Dream Car</span></h1>
+    <p class="lead mb-4">World's #1 platform for luxury and affordable cars</p>
+    <div class="d-flex gap-3 justify-content-center">
+      <a href="/inventory" class="btn btn-warning btn-lg px-4 fw-bold">
+        <i class="fas fa-car me-2"></i> Browse Inventory
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Single Car Slider -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">🔥 <span class="text-warning">Featured</span> Cars</h2>
+    
+    <div id="carSlider" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Car 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="card shadow">
+                <div class="row g-0">
+                  <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d" class="img-fluid rounded-start" alt="Toyota Corolla">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h3 class="card-title">Toyota Corolla 2023</h3>
+                      <p><i class="fas fa-tachometer-alt text-warning"></i> <strong>Mileage:</strong> 14 km/l</p>
+                      <p><i class="fas fa-cogs text-warning"></i> <strong>Engine:</strong> 1.8L Hybrid</p>
+                      <p><i class="fas fa-money-bill-wave text-warning"></i> <strong>Price:</strong> $18,500</p>
+                      <a href="/inventory#toyota-corolla" class="btn btn-warning mt-3">View Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="card shadow">
+                <div class="row g-0">
+                  <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e" class="img-fluid rounded-start" alt="Honda Civic">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h3 class="card-title">Honda Civic RS Turbo</h3>
+                      <p><i class="fas fa-tachometer-alt text-warning"></i> <strong>Mileage:</strong> 12 km/l</p>
+                      <p><i class="fas fa-cogs text-warning"></i> <strong>Engine:</strong> 1.5L Turbo</p>
+                      <p><i class="fas fa-money-bill-wave text-warning"></i> <strong>Price:</strong> $22,300</p>
+                      <a href="/inventory#honda-civic" class="btn btn-warning mt-3">View Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car 3 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="card shadow">
+                <div class="row g-0">
+                  <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d" class="img-fluid rounded-start" alt="BMW X5">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h3 class="card-title">BMW X5 2022</h3>
+                      <p><i class="fas fa-tachometer-alt text-warning"></i> <strong>Mileage:</strong> 9 km/l</p>
+                      <p><i class="fas fa-cogs text-warning"></i> <strong>Engine:</strong> 3.0L TwinPower Turbo</p>
+                      <p><i class="fas fa-money-bill-wave text-warning"></i> <strong>Price:</strong> $62,000</p>
+                      <a href="/inventory#bmw-x5" class="btn btn-warning mt-3">View Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">⭐ Why <span class="text-warning">Choose Us?</span></h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-shield-alt fa-3x text-warning mb-3"></i>
+        <h4>150% Quality Guarantee</h4>
+        <p>We inspect every vehicle thoroughly before listing</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-tag fa-3x text-warning mb-3"></i>
+        <h4>Best Prices Worldwide</h4>
+        <p>Unbeatable deals compared to market rates</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-headset fa-3x text-warning mb-3"></i>
+        <h4>24/7 Global Support</h4>
+        <p>Our team is always ready to assist you</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

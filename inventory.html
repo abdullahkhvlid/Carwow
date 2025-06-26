@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% block title %}Inventory | CarWow{% endblock %}
+{% block body %}
+<div class="container py-5">
+  <h1 class="text-center mb-5">🚗 <span class="text-warning">Premium</span> Car Inventory</h1>
+  
+  <!-- Search & Filters -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <form action="/search" method="GET" class="input-group shadow">
+        <input type="text" class="form-control" name="q" placeholder="Search cars...">
+        <button class="btn btn-warning" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <select class="form-select shadow">
+        <option>Filter by Price</option>
+        <option>Under $20,000</option>
+        <option>$20,000 - $50,000</option>
+        <option>Over $50,000</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Car Grid -->
+  <div class="row g-4">
+    <!-- Car 1 -->
+    <div class="col-md-4" id="toyota-corolla">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d" class="card-img-top" alt="Toyota Corolla">
+        <div class="card-body">
+          <h5 class="card-title">Toyota Corolla 2023</h5>
+          <p><i class="fas fa-tachometer-alt text-warning"></i> <strong>Mileage:</strong> 14 km/l</p>
+          <p><i class="fas fa-cogs text-warning"></i> <strong>Engine:</strong> 1.8L Hybrid</p>
+          <p><i class="fas fa-money-bill-wave text-warning"></i> <strong>Price:</strong> $18,500</p>
+        </div>
+        <div class="card-footer bg-white">
+          <a href="tel:+923160109469" class="btn btn-warning w-100">
+            <i class="fas fa-phone"></i> Call Owner
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 2 -->
+    <div class="col-md-4" id="honda-civic">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e" class="card-img-top" alt="Honda Civic">
+        <div class="card-body">
+          <h5 class="card-title">Honda Civic RS Turbo</h5>
+          <p><i class="fas fa-tachometer-alt text-warning"></i> <strong>Mileage:</strong> 12 km/l</p>
+          <p><i class="fas fa-cogs text-warning"></i> <strong>Engine:</strong> 1.5L Turbo</p>
+          <p><i class="fas fa-money-bill-wave text-warning"></i> <strong>Price:</strong> $22,300</p>
+        </div>
+        <div class="card-footer bg-white">
+          <a href="tel:+923160109469" class="btn btn-warning w-100">
+            <i class="fas fa-phone"></i> Call Owner
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 3 -->
+    <div class="col-md-4" id="bmw-x5">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d" class="card-img-top" alt="BMW X5">
+        <div class="card-body">
+          <h5 class="card-title">BMW X5 2022</h5>
+          <p><i class="fas fa-tachometer-alt text-warning"></i> <strong>Mileage:</strong> 9 km/l</p>
+          <p><i class="fas fa-cogs text-warning"></i> <strong>Engine:</strong> 3.0L TwinPower</p>
+          <p><i class="fas fa-money-bill-wave text-warning"></i> <strong>Price:</strong> $62,000</p>
+        </div>
+        <div class="card-footer bg-white">
+          <a href="tel:+923160109469" class="btn btn-warning w-100">
+            <i class="fas fa-phone"></i> Call Owner
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 4 -->
+    <div class="col-md-4" id="mercedes-eclass">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537" class="card-img-top" alt="Mercedes E-Class">
+        <div class="card-body">
+          <h5 class="card-title">Mercedes-Benz E-Class</h5>
+          <p><i class="fas fa-tachometer-alt text-warning"></i> <strong>Mileage:</strong> 11 km/l</p>
+          <p><i class="fas fa-cogs text-warning"></i> <strong>Engine:</strong> 2.0L Turbo</p>
+          <p><i class="fas fa-money-bill-wave text-warning"></i> <strong>Price:</strong> $58,500</p>
+        </div>
+        <div class="card-footer bg-white">
+          <a href="tel:+923160109469" class="btn btn-warning w-100">
+            <i class="fas fa-phone"></i> Call Owner
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 5 -->
+    <div class="col-md-4" id="audi-q7">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2" class="card-img-top" alt="Audi Q7">
+        <div class="card-body">
+          <h5 class="card-title">Audi Q7 2021</h5>
+          <p><i class="fas fa-tachometer-alt text-warning"></i> <strong>Mileage:</strong> 10 km/l</p>
+          <p><i class="fas fa-cogs text-warning"></i> <strong>Engine:</strong> 3.0L V6</p>
+          <p><i class="fas fa-money-bill-wave text-warning"></i> <strong>Price:</strong> $54,800</p>
+        </div>
+        <div class="card-footer bg-white">
+          <a href="tel:+923160109469" class="btn btn-warning w-100">
+            <i class="fas fa-phone"></i> Call Owner
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 6 -->
+    <div class="col-md-4" id="landrover-defender">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.wsj.net/im-913577?width=1280&size=1.499" class="card-img-top" alt="Land Rover">
+        <div class="card-body">
+          <h5 class="card-title">Land Rover Defender</h5>
+          <p><i class="fas fa-tachometer-alt text-warning"></i> <strong>Mileage:</strong> 8 km/l</p>
+          <p><i class="fas fa-cogs text-warning"></i> <strong>Engine:</strong> 3.0L Diesel</p>
+          <p><i class="fas fa-money-bill-wave text-warning"></i> <strong>Price:</strong> $72,000</p>
+        </div>
+        <div class="card-footer bg-white">
+          <a href="tel:+923160109469" class="btn btn-warning w-100">
+            <i class="fas fa-phone"></i> Call Owner
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 7 -->
+    <div class="col-md-4" id="porsche-911">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888" class="card-img-top" alt="Porsche 911">
+        <div class="card-body">
+          <h5 class="card-title">Porsche 911 Carrera</h5>
+          <p><i class="fas fa-tachometer-alt text-warning"></i> <strong>Mileage:</strong> 7 km/l</p>
+          <p><i class="fas fa-cogs text-warning"></i> <strong>Engine:</strong> 3.0L Twin-Turbo</p>
+          <p><i class="fas fa-money-bill-wave text-warning"></i> <strong>Price:</strong> $115,000</p>
+        </div>
+        <div class="card-footer bg-white">
+          <a href="tel:+923160109469" class="btn btn-warning w-100">
+            <i class="fas fa-phone"></i> Call Owner
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 8 -->
+    <div class="col-md-4" id="tesla-model3">
+      <div class="card h-100 shadow-sm">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/2019_Tesla_Model_3_Performance_AWD_Front.jpg" class="card-img-top" alt="Tesla Model 3">
+        <div class="card-body">
+          <h5 class="card-title">Tesla Model 3</h5>
+          <p><i class="fas fa-bolt text-warning"></i> <strong>Range:</strong> 358 km</p>
+          <p><i class="fas fa-tachometer-alt text-warning"></i> <strong>0-100:</strong> 3.1s</p>
+          <p><i class="fas fa-money-bill-wave text-warning"></i> <strong>Price:</strong> $48,000</p>
+        </div>
+        <div class="card-footer bg-white">
+          <a href="tel:+923160109469" class="btn btn-warning w-100">
+            <i class="fas fa-phone"></i> Call Owner
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Car 9 -->
+    <div class="col-md-4" id="lexus-rx350">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8" class="card-img-top" alt="Lexus RX350">
+        <div class="card-body">
+          <h5 class="card-title">Lexus RX 350</h5>
+          <p><i class="fas fa-tachometer-alt text-warning"></i> <strong>Mileage:</strong> 10 km/l</p>
+          <p><i class="fas fa-cogs text-warning"></i> <strong>Engine:</strong> 3.5L V6</p>
+          <p><i class="fas fa-money-bill-wave text-warning"></i> <strong>Price:</strong> $52,500</p>
+        </div>
+        <div class="card-footer bg-white">
+          <a href="tel:+923160109469" class="btn btn-warning w-100">
+            <i class="fas fa-phone"></i> Call Owner
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
